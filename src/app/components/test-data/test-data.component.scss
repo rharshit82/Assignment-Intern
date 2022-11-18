@@ -39,7 +39,7 @@
         &__th {
           font-size: 1.1em;
           width: fit-content;
-          background-color:#575757;
+          background-color:#555a92;
           padding: 1rem;
           color: #f3e8e8;
           position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
@@ -62,7 +62,7 @@
     }
     &__tbody {
       &__tr {
-        border: 1px solid lightgrey;
+        border: 2px solid lightgrey;
         
         &__ids {
           &__tr {
@@ -80,6 +80,7 @@
         &__final-runtime{
           position: relative;
           p{
+            font-weight: 500;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -102,12 +103,19 @@
         }
         &__initial-start-time {
           background-color: #f2f2f2;
+          white-space: initial!important;
+          text-align: center;
         }
         &__final-result {
           padding: 0.8rem;
           position: relative;
           &__tr {
             &__img {
+              img{
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+              
               position: absolute;
               top: 50%;
               left: 50%;
@@ -138,10 +146,18 @@
               justify-content: center;
               align-items: center;
               &__e1 {
+                img{
+                  width: 1.5rem;
+                  height: 1.5rem;
+                }
                 background-color: #f2f2f2;
                 padding: 0.8rem;
               }
               &__e2 {
+                img{
+                  width: 1.5rem;
+                  height: 1.5rem;
+                }
                 padding: 0.8rem;
               }
             }
@@ -153,13 +169,13 @@
             flex-direction: column;
             width: 20rem;
             &__e1 {
-              font-weight: bold;
+              font-weight: 600;
               white-space: initial!important;
               background-color: #f2f2f2;
               padding: 0.8rem;
             }
             &__e2 {
-              font-weight: bold;
+              font-weight: 600;
               white-space: initial!important;
               padding: 0.8rem;
             }
