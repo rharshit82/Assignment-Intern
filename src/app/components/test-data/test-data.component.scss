@@ -1,4 +1,121 @@
-.data{
-    width: 60%;
-    padding: 1rem;
+.data {
+  font-size: 0.9em;
+  width: 60%;
+  padding: 1rem;
+  &__table {
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    td {
+      height: 2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &__thead {
+      &__tr {
+        &__th {
+          width: fit-content;
+          background-color: #252f38;
+          padding: 1rem;
+          color: #dbd1d0;
+        }
+        &__error {
+          min-width: 10rem;
+        }
+      }
+    }
+    &__tbody {
+      &__tr {
+        &__ids {
+          &__tr {
+            display: flex;
+            flex-direction: column;
+            &__e1 {
+              background-color: #f2f2f2;
+              padding: 0.8rem;
+            }
+            &__e2 {
+              padding: 0.8rem;
+            }
+          }
+        }
+        &__runtime {
+          &__tr {
+            display: flex;
+            flex-direction: column;
+            &__e1 {
+              background-color: #f2f2f2;
+              padding: 0.8rem;
+            }
+            &__e2 {
+              padding: 0.8rem;
+            }
+          }
+        }
+        &__initial-start-time {
+          // width: max-content;
+        }
+        &__final-result {
+          padding: 0.8rem;
+          position: relative;
+          &__tr {
+            &__img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        &__start-time {
+          &__tr {
+            display: flex;
+            flex-direction: column;
+            &__e1 {
+              background-color: #f2f2f2;
+              padding: 0.8rem;
+            }
+            &__e2 {
+              padding: 0.8rem;
+            }
+          }
+        }
+        &__result {
+          &__tr {
+            display: flex;
+            flex-direction: column;
+            &__img {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &__e1 {
+                background-color: #f2f2f2;
+                padding: 0.8rem;
+              }
+              &__e2 {
+                padding: 0.8rem;
+              }
+            }
+          }
+        }
+        &__err {
+          &__tr {
+            display: flex;
+            flex-direction: column;
+            &__e1 {
+              background-color: #f2f2f2;
+              padding: 0.8rem;
+            }
+            &__e2 {
+              padding: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

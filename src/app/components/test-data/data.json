@@ -24,6 +24,30 @@
     "SystemTestSetting": null
   },
   {
+    "Passed": false,
+    "Results": [
+      {
+        "Error": "An error occured while trying to update vessel courses.",
+        "Id": 66087,
+        "Passed": false,
+        "RunTime": 14150,
+        "StartTime": "2022-09-27T11:13:54.8811366Z",
+        "TestType": 0
+      },
+      {
+        "Error": "An error occured while trying to update vessel courses.",
+        "Id": 66092,
+        "Passed": false,
+        "RunTime": 14025,
+        "StartTime": "2022-09-27T11:13:55.0061368Z",
+        "TestType": 0
+      }
+    ],
+    "RunTime": 14153,
+    "StartTime": "2022-09-27T11:13:54.8811366Z",
+    "SystemTestSetting": null
+  },
+  {
     "Passed": true,
     "Results": [
       {

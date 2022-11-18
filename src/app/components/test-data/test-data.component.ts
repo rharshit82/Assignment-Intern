@@ -14,6 +14,7 @@ export class TestDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.lis = data;
+    this.lis = this.lis.slice(0, 10)
     console.log(this.lis)
   }
 
