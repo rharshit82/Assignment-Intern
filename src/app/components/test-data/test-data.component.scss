@@ -17,10 +17,15 @@
     &__thead {
       &__tr {
         &__th {
+          font-size: 1em;
           width: fit-content;
           background-color: #252f38;
           padding: 1rem;
           color: #dbd1d0;
+          position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
+          position: sticky;
+          top: 0;
+          z-index: 1;
         }
         &__error {
           min-width: 10rem;
@@ -29,6 +34,7 @@
     }
     &__tbody {
       &__tr {
+        border: 1px solid black;
         &__ids {
           &__tr {
             display: flex;
@@ -56,7 +62,7 @@
           }
         }
         &__initial-start-time {
-          // width: max-content;
+          background-color: #f2f2f2;
         }
         &__final-result {
           padding: 0.8rem;
