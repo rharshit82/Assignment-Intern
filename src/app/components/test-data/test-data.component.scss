@@ -39,10 +39,9 @@
         &__th {
           font-size: 1.1em;
           width: fit-content;
-          // background-color:#115082;
-          background-color:#546470;
+          background-color:#464646;
           padding: 1rem;
-          color: #e9dedd;
+          color: rgb(236, 231, 231);
           position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
           position: sticky;
           top: 0;
@@ -143,11 +142,16 @@
           &__tr {
             display: flex;
             flex-direction: column;
+            width: 20rem;
             &__e1 {
+              font-weight: bold;
+              white-space: initial!important;
               background-color: #f2f2f2;
               padding: 0.8rem;
             }
             &__e2 {
+              font-weight: bold;
+              white-space: initial!important;
               padding: 0.8rem;
             }
           }

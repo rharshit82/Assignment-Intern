@@ -16,3 +16,18 @@ body::-webkit-scrollbar {
     background-color: darkgrey;
     outline: 1px solid slategrey;
   }
+
+  body {
+    /* Foreground, Background */
+    scrollbar-color: #999 #333;
+  }
+  body::-webkit-scrollbar {
+    width: 0.8rem; /* Mostly for vertical scrollbars */
+  }
+  body::-webkit-scrollbar-thumb { /* Foreground */
+    border-radius: 2rem;
+    background: rgb(74, 66, 66);
+  }
+  body::-webkit-scrollbar-track { /* Background */
+    background: white;
+  }
