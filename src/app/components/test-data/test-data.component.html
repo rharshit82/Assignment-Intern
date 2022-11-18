@@ -26,8 +26,8 @@
             <td class="data__table__tbody__tr__ids__tr__e2">{{ e.Results[1].Id }}</td>
           </tr>
         </td>
-        <td class="data__table__tbody__tr__runtime" scope="col">
-          {{ e.RunTime | date: "hh:mm:ss.ms" }}
+        <td class="data__table__tbody__tr__final-runtime" scope="col">
+          <p>{{ e.RunTime | date: "hh:mm:ss.ms" }}</p>
         </td>
         <td class="data__table__tbody__tr__initial-start-time" scope="col">
           {{ e.StartTime | date: "medium" }}

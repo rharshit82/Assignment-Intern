@@ -1,8 +1,28 @@
 .data {
+  /* Foreground, Background */
+  scrollbar-color: #999 #333;
+}
+.data::-webkit-scrollbar {
+  width: 0.8rem; /* Mostly for vertical scrollbars */
+}
+.data::-webkit-scrollbar-thumb { /* Foreground */
+  border-radius: 2rem;
+  background: #00B2AF;
+}
+.data::-webkit-scrollbar-track { /* Background */
+  background: white;
+}
+
+.data {
+  overflow-y: scroll;
+  width: fit-content;
+  height: 40rem;
   font-size: 0.9em;
-  width: 60%;
   padding: 1rem;
   &__table {
+    
+    height: 10rem;
+    
     width: 100%;
     table-layout: auto;
     border: 1px solid black;
@@ -17,11 +37,12 @@
     &__thead {
       &__tr {
         &__th {
-          font-size: 1em;
+          font-size: 1.1em;
           width: fit-content;
-          background-color: #252f38;
+          // background-color:#115082;
+          background-color:#546470;
           padding: 1rem;
-          color: #dbd1d0;
+          color: #e9dedd;
           position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
           position: sticky;
           top: 0;
@@ -34,7 +55,7 @@
     }
     &__tbody {
       &__tr {
-        border: 1px solid black;
+        border: 1px solid lightgrey;
         &__ids {
           &__tr {
             display: flex;
@@ -46,6 +67,16 @@
             &__e2 {
               padding: 0.8rem;
             }
+          }
+        }
+        &__final-runtime{
+          position: relative;
+          p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
           }
         }
         &__runtime {
