@@ -1,0 +1,32 @@
+.tasks{
+    padding: 0.2rem;
+   display: flex;
+   flex-direction: column;
+   &__button{
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+    width: 65%;
+    background-color: inherit;
+    margin: 0.2rem;
+    border-radius: 0.8rem;
+    border: 1.5px solid grey;
+    &__img{
+        margin-right: 0.3rem;
+        &--delete{
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: 	#a9a9a9;
+    }
+    &--delete{
+        color: white;
+        background-color: #DF3948;
+        &:hover{
+            background-color: darkred;
+        }
+    }
+   }
+}

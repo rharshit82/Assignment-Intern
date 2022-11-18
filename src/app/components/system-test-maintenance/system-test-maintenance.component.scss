@@ -1,0 +1,56 @@
+.test-maintenance{
+    margin: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: rgb(0 0 0 / 35%) 0px 2px 4px;
+    padding: 0.5rem 1rem;
+    &__content{
+        &__hrheading{
+            border-top: 2px solid #9ED0CC;
+        }
+        &__select-test{
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            &__label{
+                flex-grow: 0.1;
+            }
+            &__select-div{
+                &__select{
+                    width: 20vw;
+                    padding: 0.5rem;
+                }
+            }
+        }
+        &__test{
+            display: flex;
+            height: 100%;
+            &__tasks{
+                width: 18%;
+                // border: 1px solid black;
+            }
+            // #9ED0CC
+            &__hr{
+                border-left: 0.1rem solid #9ED0CC;
+                // height: 500px;
+            }
+            &__data{
+                width: 80%;
+            }
+        }
+    }
+    
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='lightblue' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }

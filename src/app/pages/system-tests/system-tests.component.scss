@@ -1,0 +1,12 @@
+.system{
+    &__home{
+        display: flex;
+        padding: 0 2rem;
+        &__heading{
+        margin: 1rem 0 1rem 2rem;
+        }
+    }
+    &__hr{
+        margin-left: 5rem;
+    }
+}

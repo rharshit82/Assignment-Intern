@@ -1,0 +1,26 @@
+<div class="data">
+    <table class="table" id='tab'>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Total Run Time hh:mm:ss.ms</th>
+            <th scope="col">Initial Start Time</th>
+            <th scope="col">Passed</th>
+            <th scope="col">Run Time hh:mm:ss.ms</th>
+            <th scope="col">Test Start Time</th>
+            <th scope="col">Error</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let e of lis;">
+            <td><tr><td>{{e.Results[0].Id}}</td><td>{{e.Results[1].Id}}</td></tr></td>
+            <td scope="col">{{e.RunTime}}</td>
+            <td scope="col">{{e.StartTime}}</td>
+            <td><tr><td>{{e.Results[0].Passed}}</td><td>{{e.Results[1].Passed}}</td></tr></td>
+            <td><tr><td>{{e.Results[0].RunTime}}</td><td>{{e.Results[1].RunTime}}</td></tr></td>
+            <td><tr><td>{{e.Results[0].StartTime}}</td><td>{{e.Results[1].StartTime}}</td></tr></td>
+            <td><tr><td>{{e.Results[0].Error}}</td><td>{{e.Results[1].Error}}</td></tr></td>
+        </tr>
+        </tbody>
+    </table>   
+</div>

@@ -1,15 +1,10 @@
 .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10vh;
+    height: 3rem;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
-    color: white;
     font-weight: 600;
     img {
-        margin: 0 16px;
+        margin-left: 1rem;
+        margin-right: 1rem
       }
   }
