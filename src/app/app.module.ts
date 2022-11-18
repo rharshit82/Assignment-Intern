@@ -7,6 +7,7 @@ import { SystemTestMaintenanceComponent } from './components/system-test-mainten
 import { TestTasksComponent } from './components/test-tasks/test-tasks.component';
 import { TestDataComponent } from './components/test-data/test-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
