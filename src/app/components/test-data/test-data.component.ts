@@ -20,13 +20,27 @@ function convertFromMili (x:number): string{
   styleUrls: ['./test-data.component.scss']
 })
  
+
 export class TestDataComponent implements OnInit {
   lis = [];
   constructor(private http : HttpClient) { 
     
   }
  
-
+  copyMessage(val: string){
+    console.log("helo")
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+  }
   ngOnInit(): void {
     this.lis = data;
     // this.lis = this.lis.slice(0, 10)

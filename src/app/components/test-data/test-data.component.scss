@@ -44,7 +44,7 @@
           color: #f3e8e8;
           position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
           position: sticky;
-          top: 0;
+          top: -20px;
           z-index: 1;
         }
         &__img{
@@ -66,26 +66,41 @@
         
         &__ids {
           &__tr {
+            
             display: flex;
             flex-direction: column;
             &__e1 {
               background-color: #f2f2f2;
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 600;
+              }
             }
             &__e2 {
+              &:hover{
+                cursor: pointer;
+                font-weight: 600;
+              }
               padding: 0.8rem;
             }
           }
         }
         &__final-runtime{
           position: relative;
+          font-weight: 500;
           p{
-            font-weight: 500;
+            padding: 1rem;
+            
             position: absolute;
             top: 50%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+          }
+          &:hover{
+            cursor: pointer;
+            font-weight: 700;
           }
         }
         &__runtime {
@@ -95,9 +110,17 @@
             &__e1 {
               background-color: #f2f2f2;
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 600;
+              }
             }
             &__e2 {
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 600;
+              }
             }
           }
         }
@@ -105,11 +128,16 @@
           background-color: #f2f2f2;
           white-space: initial!important;
           text-align: center;
+          &:hover{
+            cursor: pointer;
+            font-weight: 600;
+          }
         }
         &__final-result {
           padding: 0.8rem;
           position: relative;
           &__tr {
+            
             &__img {
               img{
                 width: 1.5rem;
@@ -131,9 +159,17 @@
             &__e1 {
               background-color: #f2f2f2;
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 600;
+              }
             }
             &__e2 {
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 600;
+              }
             }
           }
         }
@@ -173,11 +209,19 @@
               white-space: initial!important;
               background-color: #f2f2f2;
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 700;
+              }
             }
             &__e2 {
               font-weight: 600;
               white-space: initial!important;
               padding: 0.8rem;
+              &:hover{
+                cursor: pointer;
+                font-weight: 700;
+              }
             }
           }
         }
