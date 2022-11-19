@@ -1,19 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges  } from '@angular/core';
 import data from './data.json'
 import {MatSnackBar} from '@angular/material/snack-bar';
 
-function convertFromMili (x:number): string{
-  let milliseconds: number = Math.trunc((x%1000)/100)
-  let seconds: number = Math.trunc((x/1000)%60)
-  let minutes: number = Math.trunc((x/(1000*60))%60)
-  let hours: number = Math.trunc((x/(1000*60*60))%24)
 
-  let hourstring:string  = (hours < 10) ? "0" + hours.toString() : hours.toString();
-  let minutestring:string  = (minutes < 10) ? "0" + minutes.toString() : minutes.toString();
-  let secondstring:string = (seconds < 10) ? "0" + seconds.toString() : seconds.toString();
-
-  return hourstring + ":" + minutestring + ":" + secondstring + "." + milliseconds;
-}
 @Component({
   selector: 'app-test-data',
   templateUrl: './test-data.component.html',
@@ -22,7 +11,7 @@ function convertFromMili (x:number): string{
  
 
 export class TestDataComponent implements OnInit {
-  lis = [];
+  @Input() lis = [];
   constructor(private _snackBar: MatSnackBar) { 
     
   }
@@ -30,6 +19,18 @@ export class TestDataComponent implements OnInit {
     this._snackBar.open(val, 'Copied', {
       duration: 2000
     });
+  }
+  convertFromMili (x:number): string{
+    let milliseconds: number = Math.trunc((x%1000)/100)
+    let seconds: number = Math.trunc((x/1000)%60)
+    let minutes: number = Math.trunc((x/(1000*60))%60)
+    let hours: number = Math.trunc((x/(1000*60*60))%24)
+  
+    let hourstring:string  = (hours < 10) ? "0" + hours.toString() : hours.toString();
+    let minutestring:string  = (minutes < 10) ? "0" + minutes.toString() : minutes.toString();
+    let secondstring:string = (seconds < 10) ? "0" + seconds.toString() : seconds.toString();
+  
+    return hourstring + ":" + minutestring + ":" + secondstring + "." + milliseconds;
   }
   copyMessage(val: string){
     this.openSnackBar(val);
@@ -45,15 +46,14 @@ export class TestDataComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(selBox);
   }
-  ngOnInit(): void {
+  changeData(): void {
     this.lis = data;
-    // this.lis = this.lis.slice(0, 10)
-    this.lis.forEach((ele) =>{
-      ele.RunTime = convertFromMili(ele.RunTime)
-      ele.Results[0].RunTime = convertFromMili(ele.Results[0].RunTime)
-      ele.Results[1].RunTime = convertFromMili(ele.Results[1].RunTime)
-    })
-    console.log(this.lis)
+  }
+  ngOnInit(): void {
+    this.changeData();
+  }
+  ngOnDestroy(): void{
+    this.lis = []
   }
   
 }

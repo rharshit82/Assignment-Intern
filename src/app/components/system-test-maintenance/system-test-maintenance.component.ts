@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class SystemTestMaintenanceComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit(): void {
+  }
+  testState: string = "";
+  isLoading: boolean = false
+  changeState = (newState: string) =>{
+    this.isLoading = true
+    setTimeout(() =>{
+      this.isLoading = false;
+    }, 1000)
+    this.testState = newState;
   }
 
 }

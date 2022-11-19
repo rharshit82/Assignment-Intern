@@ -24,9 +24,29 @@
       </div>
     </div>
     <div class="test-maintenance__content__test">
-      <app-test-tasks class="test-maintenance__content__test__tasks"></app-test-tasks>
+      <app-test-tasks
+        [changeState]="changeState"
+        class="test-maintenance__content__test__tasks"
+      ></app-test-tasks>
       <div class="test-maintenance__content__test__hr">
-      <app-test-data class="test-maintenance__content__test__data"></app-test-data>
+        <div>
+          <div class="test-maintenance__content__test__spinnerdiv" *ngIf="isLoading">
+            <mat-spinner class="test-maintenance__content__test__spinnerdiv__spinner"></mat-spinner>
+          </div>
+          <div *ngIf="!isLoading">
+            <div *ngIf="testState === 'History'">
+              <app-test-data
+                class="test-maintenance__content__test__data"
+              ></app-test-data>
+            </div>
+            <div *ngIf="testState !== 'History'">
+              <app-other-components
+                [testState]="testState"
+              ></app-other-components>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

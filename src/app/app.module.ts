@@ -7,22 +7,25 @@ import { SystemTestMaintenanceComponent } from './components/system-test-mainten
 import { TestTasksComponent } from './components/test-tasks/test-tasks.component';
 import { TestDataComponent } from './components/test-data/test-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSnackBarModule} from '@angular/material/snack-bar'
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { OtherComponentsComponent } from './components/other-components/other-components.component'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
     AppComponent,
     SystemTestsComponent,
     SystemTestMaintenanceComponent,
-    // MatButtonModule,MatSnackBarModule,
     TestTasksComponent,
     TestDataComponent,
+    OtherComponentsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

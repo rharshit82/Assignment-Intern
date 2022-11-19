@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test-tasks',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-tasks.component.scss']
 })
 export class TestTasksComponent implements OnInit {
+  @Input() changeState: (args: string) => void;
 
   constructor() { }
 
