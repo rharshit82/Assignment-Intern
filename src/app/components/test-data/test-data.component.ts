@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import data from './data.json'
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 function convertFromMili (x:number): string{
   let milliseconds: number = Math.trunc((x%1000)/100)
@@ -23,12 +23,16 @@ function convertFromMili (x:number): string{
 
 export class TestDataComponent implements OnInit {
   lis = [];
-  constructor(private http : HttpClient) { 
+  constructor(private _snackBar: MatSnackBar) { 
     
   }
- 
+  openSnackBar(val: string) {
+    this._snackBar.open(val, 'Copied', {
+      duration: 2000
+    });
+  }
   copyMessage(val: string){
-    console.log("helo")
+    this.openSnackBar(val);
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
